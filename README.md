@@ -9,6 +9,7 @@ The files in the `spec` directory contain the test suites. Your goal is to get a
 
 The file `src/objects.js` contains function definitions and explanations for the following functions (*italicized functions* are solved for you). Pass each of the tests by having the functions return the correct value:
 
+#### Slides: http://slides.com/telegraphprep/telegraphprepweek1
 
 #### Tests:
 - [ ] MysticalAnimal
