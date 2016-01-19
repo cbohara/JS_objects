@@ -30,8 +30,7 @@
 
     describe('AddFourthProperty', function() {
       it('should add a likes property with the value of an empty array', function() {
-        expect(typeof objects.addFourthProperty()['likes']).to.equal([]);
-        expect(mysticalAnimal.likes.length).to.equal(0);
+        expect(Array.isArray(objects.addFourthProperty()['likes'])).to.equal(true);
       });
     });
 
@@ -45,31 +44,31 @@
 
     describe('accessFirstProperty', function() {
       it('should be able to pull out the first element of an array', function() {
-        expect(objects.addFirstProperty()).to.equal('dragon');
+        expect(objects.accessFirstProperty()).to.equal('dragon');
       });
     });
 
     describe('accessSecondProperty', function() {
       it('should be able to pull out the first element of an array', function() {
-        expect(objects.addFirstProperty()).to.equal('Leslie');
+        expect(objects.accessSecondProperty()).to.equal('Leslie');
       });
     });
 
     describe('accessThirdProperty', function() {
       it('should be able to pull out the first element of an array', function() {
-        expect(objects.addFirstProperty()).to.equal(true);
+        expect(objects.accessThirdProperty()).to.equal(true);
       });
     });
 
     describe('AddAccessFourthProperty', function() {
       it('should be able to pull out the first element of an array', function() {
-        expect(typeof objects.addFirstProperty()).to.equal([]);
+        expect(Array.isArray(objects.addFourthProperty()['likes'])).to.equal(true);
       });
     });
 
     describe('AddAccessFifthProperty', function() {
       it('should be able to pull out the first element of an array', function() {
-        expect(objects.addFirstProperty()).to.equal('Kanye West');
+        expect(objects.accessFifthProperty()).to.equal('Kanye West');
       });
     });
 
@@ -78,14 +77,6 @@
         expect(objects.addSixthProperty()['food']).to.equal('BBQ');
       });
     });
-
-    describe('AddSeventhProperty', function() {
-      it('should add a property canFly with the value of true using bracket notation', function() {
-        expect(object.addSeventhProperty()['canFly']).to.equal(true)
-        expect(objects.addSixthProperty()['food']).to.equal('BBQ');
-      });
-    });
-
 
     describe('variablePracticeOne', function() {
       it('should return the evaluated value of mysticalAnimal.thisIsAVariable', function() {

@@ -11,8 +11,9 @@
   objects.mysticalAnimal = function(){
   	// 1. To start, let's create a variable, mysticalAnimal
   	// and set it equal to an object literal.
+  	var mysticalAnimal = {};
   	// 2. Place your mystical animal after the return statement
-  	return {};
+  	return mysticalAnimal;
   };
   // don't touch this line
   
@@ -32,7 +33,7 @@
   objects.addSecondProperty = function(){
   	// 1. Add a name property, and set it equal to 'Leslie'.
   	// 2. place your new mystical animal after the return statement
-  	return 
+  	return
   };
   
   objects.addThirdProperty = function(){
@@ -60,7 +61,7 @@
   	//1. use dot notation to return the value 'dragon' saved in your 
   	// mystical animal.
 
-  	return 
+  	return
   }
 
   objects.accessSecondProperty = function(){
@@ -104,13 +105,6 @@
   	// 1. on the line ABOVE this function, create a variable called newPropertyToAdd, and set it equal to 'food'.
     // 2. Now, using bracket notation and newPropertyToAdd, create a food property on our mysticalAnimal object, and set it equal to 'BBQ'. NOTE: you should not be typing the word food to accomplish this task!
   	return
-  };
-
-
-  objects.addSeventhProperty = function(){
-  	// 1. on the line ABOVE this function, change newPropertyToAdd to 'canFly'
-    // 2. Now, using bracket notation and newPropertyToAdd, set the value of canFly to true
-    return
   };
 
   // Before moving on, What do you expect to happen when we type in the following line?
