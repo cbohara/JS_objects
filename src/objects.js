@@ -1,4 +1,4 @@
-(function() {
+ (function() {
   'use strict';
 
   window.objects = {};
@@ -27,32 +27,37 @@
   objects.addFirstProperty = function(){
   	// 1. Using Dot notation, add a 'type' property to mysticalAnimal and set it equal to 'dragon'.
   	// 2. place your new mysticalAnimal after return statement
-  	return 
+    mysticalAnimal.type = 'dragon';
+  	return mysticalAnimal;
   };
 
   objects.addSecondProperty = function(){
   	// 1. Add a name property, and set it equal to 'Leslie'.
   	// 2. place your new mystical animal after the return statement
-  	return
+    mysticalAnimal.name = 'Leslie';
+  	return mysticalAnimal;
   };
   
   objects.addThirdProperty = function(){
   	// 1. Add a 'cool' property, and set it equal to true.
   	// 2. place your new mystical animal after the return statement
-  	return 
+    mysticalAnimal.cool = true;
+  	return mysticalAnimal;
   };
 
 
   objects.addFourthProperty = function(){
   	//1. Add a 'likes' property to your mysticalAnimal, and set it equal to an empty array.
   	//2. Place your mysticalAnimal after the return statement.
-  	return 
+    mysticalAnimal.likes = [];
+  	return mysticalAnimal;
   };
 
   objects.addFifthProperty = function(){
  	//1. Add a property called 'bestFriend', and set it equal to your Kanye West.
   	//2. Place your mysticalAnimal after the return statement.
-  	return 
+    mysticalAnimal.bestFriend = 'Kanye West';
+  	return mysticalAnimal;
   };
 
 // ACCESS USING DOT NOTATION
@@ -61,35 +66,35 @@
   	//1. use dot notation to return the value 'dragon' saved in your 
   	// mystical animal.
 
-  	return
+  	return mysticalAnimal.type;
   }
 
   objects.accessSecondProperty = function(){
   	//1. use dot notation to return the value 'Leslie' saved in your 
   	// mystical animal.
 
-  	return 
+  	return mysticalAnimal.name;
   }
 
    objects.accessThirdProperty = function(){
   	//1. use dot notation to return the boolean true saved in your 
   	// mystical animal.
 
-  	return 
+  	return mysticalAnimal.cool;
   }
 
   objects.accessFourthProperty = function(){
   	//1. use dot notation to return the empty array saved in your 
   	// mystical animal.
 
-  	return 
+  	return mysticalAnimal.likes;
   }
 
   objects.accessFifthProperty = function(){
   	//1. use dot notation to return the value 'Kanye West' saved in your 
   	// mystical animal.
 
-  	return 
+  	return mysticalAnimal.bestFriend; 
   }
 
 // Hopefully this starts to feel somewhat repetitive- that's awesome! That means that you're learing this super well so far. 
@@ -100,15 +105,17 @@
   // A. Evaluate a variable or expression, and look up what that variable evalutates to as a property name in the object.
   // B. Pass in a string (as noted by the quotes surrounding it) and look up that string as a property name in the object.
 // Remember that bracket notation is the ONLY way to look up variables or expressions when using them with objects.
-
+var newPropertyToAdd = 'food';
   objects.addSixthProperty = function(){
   	// 1. on the line ABOVE this function, create a variable called newPropertyToAdd, and set it equal to 'food'.
     // 2. Now, using bracket notation and newPropertyToAdd, create a food property on our mysticalAnimal object, and set it equal to 'BBQ'. NOTE: you should not be typing the word food to accomplish this task!
-  	return
+    mysticalAnimal[newPropertyToAdd] = 'BBQ';
+  	return mysticalAnimal;
   };
 
   // Before moving on, What do you expect to happen when we type in the following line?
-  // mysticalAnimal[newPropertyToAdd] = true;
+  mysticalAnimal[newPropertyToAdd] = true;
+  console.log(mysticalAnimal);
   // Think through this with your pair. Then uncomment that line and console.log mysticalAnimal afterwards!
   // Now let's talk through what just happened:
     // The JS interpreter reads the line of code from left to right, just as we do.
@@ -125,26 +132,27 @@
 // HINT: When looking up a string, use dot notation. When looking up a variable, use bracket notation! This is all you need to know 98% of the time.
 
 // 1. right below this line Create a variable called thisIsAVariable. Set it equal to the string 'superPower'.
-
+var thisIsAVariable = 'superPower';
 
   objects.variablePracticeOne = function(){
   // 1. What do you expect to happen when we try the following line? Talk this through with your partner for a minute.
   // 2. Set the correctAnswer variable to the value you think mysticalAnimal.thisIsAVariable is going to evaluate to.
   // NOTE: do not set 'correctAnswer' to mysticalAnimal.thisIsAVariable, rather to the value you think it will evaluate to..
-  var correctAnswer;
+  var correctAnswer = 'undefined';
   // return correctAnswer.toString();
-    return 
+    return correctAnswer.toString();
   };
 
 //Answer Explanation: The dot notation means that JS is going to try to look for a property name that is exactly the string after the dot- in this case, it's looking for a property called thisIsAVariable in our mysticalAnimal object. And clearly we don't have a property named that, so it will return undefined!
 
   objects.variablePracticeTwo = function(){
   // 1. Now try using thisIsAVariable using the proper form of access for variables. What do you get this time?
+
   // 2. return the value you think mysticalAnimal.thisIsAVariable is going to evaluate to.
   // NOTE: do not sect 'correctAnswer' to the value, but to the value you think it's going to evaluate to.
-  var correctAnswer;
+  var correctAnswer = 'superPower';
   //return correctAnswer
-    return
+    return correctAnswer;
   };
 
   // Object Literals:
@@ -158,7 +166,6 @@
   };
 	*/
   objects.literalObject = function(){
-
   	// Create a new variable called mysticalAnimal2, and set it equal to an object literal with the following properties:
   	// type
   	// name
@@ -168,10 +175,20 @@
   	// food
   	// canFly
     // collects
+    var mysticalAnimal2 = {
+      type: 'donkey',
+      name: 'steve',
+      likes: 'cats',
+      bestFriend: 'me',
+      superPower: 'kindness',
+      food: 'anything',
+      canFly: true,
+      collects: 'animals'
+    }
 
 
     // return mysticalAnimal2
-  	return
+  	return mysticalAnimal2;
   }
  
 // Awesome, by now you should have a pretty good familiarity with objects, bracket and dot notation, object literals, and accessing properties of objects. Feel free to keep exploring more on your own; objects are important things to understand!
